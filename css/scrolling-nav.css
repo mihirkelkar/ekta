@@ -52,7 +52,11 @@ span{
 
 .about-section {
     height: 100%;
+<<<<<<< HEAD
+    padding-top:100px;
+=======
     padding-top: 100px;
+>>>>>>> origin/master
     text-align: center;
     background: #eee;
 }
