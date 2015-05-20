@@ -52,18 +52,14 @@ span{
 
 .about-section {
     height: 100%;
-<<<<<<< HEAD
-    padding-top:100px;
-=======
     padding-top: 100px;
->>>>>>> origin/master
     text-align: center;
     background: #eee;
 }
 
 .services-section {
     height: 100%;
-    padding-top: 50px;
+    padding-top: 80px;
     text-align: center;
     background-image: url("../img/housing.png");
     background-size: cover;
@@ -71,11 +67,28 @@ span{
 
 .contact-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 180px;
     text-align: center;
     background: #eee;
 }
 
 p {
     padding: 10px;
+<<<<<<< HEAD
+}
+
+@media screen and (max-width: 600px) {
+  #warnone {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #warntwo {
+    visibility: hidden;
+    display: none;
+  }
+=======
+>>>>>>> origin/master
 }
