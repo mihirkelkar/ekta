@@ -75,3 +75,7 @@ span{
     text-align: center;
     background: #eee;
 }
+
+p {
+    padding: 20px;
+}
