@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>Ekta - Indian Student's Association at UMBC</title>
 
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,12 +24,14 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+    <script type="text/javascript" src = "js/controller.js"></script>
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="ekta">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -100,36 +103,38 @@
                         <p><strong> <a href = "http://en.wikipedia.org/wiki/Baltimore-Washington_International_Airport">BWI</a>, <a href = "http://en.wikipedia.org/wiki/Washington_Dulles_International_Airport">IAD</a> and <a href = "http://en.wikipedia.org/wiki/Ronald_Reagan_Washington_National_Airport">DCA</a> are the closest airports to UMBC </strong></p>
                         <h3>EKTA provides pickups from the BWI Airport Only</h3>
                         <p><strong> If you are arriving at IAD / DCA, you can get a cab or use <a href = "https://www.supershuttle.com/">Supershutle</a>
-                        </br>
                         </br>   
                     <h3>Luggage Information</h3>
-                    <center>
-                        <div class="row">
-    					  <div class="col-xs-6 col-md-4"><h3>Airline</h3></div>
-    					  <div class="col-xs-6 col-md-4"><h3>Check In</h3></div>
-    					  <div class="col-xs-6 col-md-4"><h3>Cabin Bag</h3></div>
-    					</div>  
-    					<div class="row">
-    					  <div class="col-xs-6 col-md-4">Emirates</div>
-    					  <div class="col-xs-6 col-md-4">2 * 23 Kg</div>
-    					  <div class="col-xs-6 col-md-4">1 * 7 Kg</div>
-    					</div>  
-    					<div class="row">
-    					  <div class="col-xs-6 col-md-4">British Airways</div>
-    					  <div class="col-xs-6 col-md-4">3 * 23 Kg</div>
-    					  <div class="col-xs-6 col-md-4">1 * 7 Kg</div>
-    					</div>  
-    					<div class="row">
-    					  <div class="col-xs-6 col-md-4">Lufthansa</div>
-    					  <div class="col-xs-6 col-md-4">2 * 23 Kg</div>
-    					  <div class="col-xs-6 col-md-4">1 * 7 Kg</div>
-    					</div>  
-                    </center>
-                    </br>
-                    </br>
+                    <center><span id = "warntwo">Emitrates : 2 * 23KG + 1 * 7KG</span></center>
+                    <center><span id = "warntwo">British : 3 * 23KG + 1 * 7KG</span></center>
+                    <center><span id = "warntwo">Lufthansa : 2 * 23KG + 1 * 7KG</span></center>
+              <center>
+                  <div id = "warnone">
+                    <div class="row">
+          					  <div class="col-xs-3 col-md-4"><h3>Airline</h3></div>
+          					  <div class="col-xs-3 col-md-4"><h3>Check In</h3></div>
+          					  <div class="col-xs-3 col-md-4"><h3>Cabin Bag</h3></div>
+          					</div>  
+          					<div class="row">
+          					  <div class="col-xs-3 col-md-4">Emirates</div>
+          					  <div class="col-xs-3 col-md-4">2 * 23 Kg</div>
+          					  <div class="col-xs-3 col-md-4">1 * 7 Kg</div>
+          					</div>  
+          					<div class="row">
+          					  <div class="col-xs-3 col-md-4">British Airways</div>
+          					  <div class="col-xs-3 col-md-4">3 * 23 Kg</div>
+          					  <div class="col-xs-3 col-md-4">1 * 7 Kg</div>
+          					</div>  
+          					<div class="row">
+          					  <div class="col-xs-6 col-md-4">Lufthansa</div>
+          					  <div class="col-xs-6 col-md-4">2 * 23 Kg</div>
+          					  <div class="col-xs-6 col-md-4">1 * 7 Kg</div>
+          					</div>
+                   </div>   
                 </center>    
-                <p><strong>According to Customs rule, an individual is allowed to carry not more than $ 10000 with him/her while travelling to USA.
-Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cash and the rest $ 7000 in the form of TCs or Forex Card.</strong> </p>   
+                <p id = "warnone"><strong>According to Customs rule, an individual is allowed to carry not more than $ 10000 with him/her while travelling to USA.
+Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cash and the rest $ 7000 in the form of TCs or Forex Card.</strong> </p>  
+                <div id = "warnone"class="alert alert-danger" role="alert" style = "text-align:center"><a href = "http://www.tsa.gov/press/releases/2014/07/06/enhanced-security-measures-certain-airports-overseas">According to new regulations, all electronic devices in your cabin bag have to be charged and operational before boarding a flight to the United States</a></div>
                 </div>
             </div>
         </div>
@@ -140,20 +145,21 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Housing Information</h1>
+                    <h1><i class="fa fa-home"></i> Housing Information</h1>
                      <p><strong>Most of us live around <a href = "https://www.google.com/maps/place/Westland+Gardens+Apartments/@39.260604,-76.698511,17z/data=!3m1!4b1!4m2!3m1!1s0x89c81c5194ae21fd:0xbce08f3f7e5460ac">Westland Garden Apartments</a>.</p><p> EKTA helps you find and lease houses, please keep an eye out for the housing forms on our <a href = "https://www.facebook.com/groups/umbcfall2011/">Facebook Group</a></strong></p>
                      </br>
                      <h3>Cost Estimates : Off Campus Housing</h3>
+                     <span id = "warntwo" style = "text-align:center;"> Rent + Utilities ~ $1300 / month </span>
                      <center>
-                        <div class="row">
+                        <div class="row" id = "warnone">
                           <div class="col-xs-6 col-md-4"> ~ $1050/month (Rent) </div>
                           <div class="col-xs-6 col-md-4"> ~ $120/month (Utilities)</div>
                           <div class="col-xs-6 col-md-4"> ~ $50/month (Internet)</div>
                         </div>
-					</center> 
+					           </center> 
                 </div>
                 <p>For more information about on campus housing, <a href = "http://www.umbc.edu/reslife/">click here.</a></p>
-                <br></br>
+                <br>
                 <p>EKTA  provides temporary housing when you arrive in Baltimore for a limited time. </p><p>Information about temporary housing will also be available on our facebook group. </p>           
             </div>
         </div>
@@ -179,7 +185,23 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
        <li><a href="#util" data-toggle="tab">Utilities</a></li>
     <li><a href="#register" data-toggle="tab">Register for Courses</a></li>
     <li><a href="#wire" data-toggle="tab">Wire Transfer</a></li>
-
+    <!--<li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Textbooks <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#dropdown1">Computer Science</a></li>
+                <li><a data-toggle="tab" href="#dropdown2">Information Systems</a></li>
+                <li><a data-toggle="tab" href="#dropdown3">Electrical Engineering</a></li>
+                <li><a data-toggle="tab" href="#dropdown4">Mechanical Engineering</a></li>
+                <li><a data-toggle="tab" href="#dropdown5">Human Centered Computing</a></li>
+                <li><a data-toggle="tab" href="#dropdown6">Engineering Management</a></li>
+                <li><a data-toggle="tab" href="#dropdown6">Computer Engineering</a></li>
+                <li><a data-toggle="tab" href="#dropdown7">Chemical Engineering</a></li>
+                <li><a data-toggle="tab" href="#dropdown8">Biology</a></li>
+                <li><a data-toggle="tab" href="#dropdown9">Physics</a></li>
+                <li><a data-toggle="tab" href="#dropdown10">Math</a></li>
+            </ul>
+    </li>
+    -->
     </ul>
     <div id="myTabContent" class="tab-content">
        <div class="tab-pane fade in active" id="home">
@@ -206,7 +228,7 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
                     <li>
                         <a  href = "https://bankofamerica.com"><p style= "text-align:left;" >Bank of America</p></a>
                         <span style="text-align:left";>
-                            Opening an account here is advisable because it is spread all over US . You will find lot of Bank of America ATM's in every state. Also it is very easy to transfer money from you account to your friend's account through online banking.  You need your Passport, I20, UMBC Id and your University Admit letter to open an account here. You will get a temporary card when you open an account and the permanent card will be shipped to your address within a week.
+                            Opening an account here is advisable because it is spread all over US . You will find lot of Bank of America ATMs in every state. Also it is very easy to transfer money from your account to your friend's account through online banking.  You need your Passport, I20, UMBC Id and your University Admit letter to open an account here. You will get a temporary card when you open an account and the permanent card will be shipped to your address within a week.
                         </span>
                     </li>
 
@@ -256,6 +278,48 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
              </li>
          </ul>
        </div>
+       <div class="tab-pane fade" id="dropdown1" ng-controller="CsCtrl">
+
+          <table class="table table-striped" > 
+            <tr>
+              <th style = "text-align:center;">
+                  Text Book
+              </th>
+              <th style = "text-align:center;">
+                  Course Name
+              </th>
+              <th style = "text-align:center;">
+                  Author
+              </th>
+            </tr>
+            <tr ng-repeat="course in courses">
+              <td>
+                {{course.name}}
+              </td>
+              <td>
+                {{course.code}}
+              </td>
+              <td>
+                {{course.}}
+              </td>
+            </tr>
+          </table>
+          <!--<div>  
+             <div class="row">
+              <div class="col-md-4"><h3>Text Book </h3></div>
+              <div class="col-md-4"><h3> Course </h3></div>
+              <div class="col-md-4"><h3> Author </h3></div>
+            </div>
+            <div ng-repeat="course in courses" style = "padding-top:20px;">  
+              <div class="row" "padding-top:20px;">
+                <div class="col-md-4">{{course.name}}</div>
+                <div class="col-md-4">{{course.code}}</div>
+                <div class="col-md-4">{{course.author}}</div>
+              </div>
+            </div>
+          </div>
+       </div>
+       -->
        
 </div>
                 </div>
