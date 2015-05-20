@@ -74,6 +74,7 @@ span{
 
 p {
     padding: 10px;
+<<<<<<< HEAD
 }
 
 @media screen and (max-width: 600px) {
@@ -88,4 +89,6 @@ p {
     visibility: hidden;
     display: none;
   }
+=======
+>>>>>>> origin/master
 }
