@@ -173,7 +173,7 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Other Information</h1>
-                        <ul id="myTab" class="nav nav-tabs">
+      <ul id="myTab" class="nav nav-tabs" >
        <li class="active">
           <a href="#home" data-toggle="tab">
              RA / TA
@@ -182,7 +182,6 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
        <li><a href="#jobs" data-toggle="tab">Campus Jobs</a></li>
        <li><a href="#imm" data-toggle="tab">Immunization</a></li>
        <li><a href="#banking" data-toggle="tab">Banking</a></li>
-       <li><a href="#grocery" data-toggle="tab">Grocery</a></li>
        <li><a href="#packing" data-toggle="tab">Packing</a></li>
        <li><a href="#util" data-toggle="tab">Utilities</a></li>
       <li><a href="#register" data-toggle="tab">Register for Courses</a></li>
@@ -202,9 +201,9 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
                 <li><a data-toggle="tab" href="#dropdown8">Biology</a></li>
                 <li><a data-toggle="tab" href="#dropdown9">Physics</a></li>
                 <li><a data-toggle="tab" href="#dropdown10">Math</a></li>
+                
             </ul>
-    </li>
-    -->
+    </li>-->
     </ul>
     <div id="myTabContent" class="tab-content">
        <div class="tab-pane fade in active" id="home">
@@ -227,9 +226,11 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
        </div>
        <div class="tab-pane fade" id="insurance">
           <p style="text-align:left;">
-            UMBC offers the AETNA health plan. This costs you about $900 a semester. Health Insurance is paid by the University for students who have a TA / RA. However, you still have a $200 deductible and $10 co-pay. To understand how health insurance works, watch the <a href = "https://www.youtube.com/watch?v=sBxLmKBqa60">video</a>. 
-            
+            UMBC offers the AETNA health plan. This costs you about $900 a semester. Health Insurance is paid by the University for students who have a TA / RA. However, you still have a $200 deductible and $10 co-pay. To understand how health insurance works, watch the video.
           </p>    
+          <div class="embed-container">
+            <iframe src="https://www.youtube.com/embed/sBxLmKBqa60" frameborder="0" allowfullscreen> </iframe>
+          </div>
        </div>
        <div class="tab-pane fade" id="banking">
           <p style="text-align:left;">
@@ -268,16 +269,7 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
                  <li>  
                     <p style="text-align:left"><a href = "https://comcast.com">Comcast</a></p>
                 </li>
-            </ul>
-       </div>    
-       <div class="tab-pane fade" id="register">
-            <p style="text-align:left;">
-             How to <a href = "https://www.facebook.com/download/preview/164811870359323">register</a> for courses at UMBC.
-            </p>
-       </div>
-       <div class="tab-pane fade" id="grocery">
-         <ul>
-             <li>
+                <li>
                  <a href = "https://www.google.com/maps/place/Patel+Brothers/@39.286492,-76.761086,17z/data=!3m1!4b1!4m2!3m1!1s0x89c81ec076aa1e1f:0x969c6e1c80db8bbc"><p style = "text-align: left;">Patel Brothers</p></a>
 
              </li>
@@ -285,11 +277,54 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
                  <a href = "https://www.google.com/maps/search/walmart/@39.286492,-76.761086,13z/data=!3m1!4b1"><p style = "text-align: left;">Walmart</p></a>
                  
              </li>
-         </ul>
+            </ul>
+       </div>    
+       <div class="tab-pane fade" id="register">
+            <p style="text-align:left;">
+             How to <a href = "https://www.facebook.com/download/preview/164811870359323">register</a> for courses at UMBC.
+            </p>
        </div>
        <div class="tab-pane fade" id="dropdown1" ng-controller="CsCtrl">
-
-          <table class="table table-striped" > 
+          <ul class = "textbooks">
+            <li>
+              Course Name
+            </li>
+            <li>
+              
+            </li>
+            <li>
+              Textbook & Author
+            </li>
+            <div ng-repeat="course in courses" class = "repeat">
+              <li>
+                {{course.code}}
+              </li>
+              <li>
+                {{course.name}}
+              </li>
+            </div>
+          </ul>
+          <!--
+          <form class = "addbook">
+            <div class="form-group">
+              <h3> Add Text Book Information </h3>
+              <input type="text" class="form-control" id="exampleInputEmail1" ng-model="sub.name"placeholder="Enter Course Name">
+            </div>
+            
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" ng-model="sub.book"placeholder="Enter Text Book Name">
+            </div>
+            <button type="submit" ng-click="update(sub)"class="btn btn-default">Submit</button>
+          </form>  
+          -->
+          <!--<form novalidate class="simple-form">
+            Course Name: <input type="text" ng-model="sub.name" /><br />
+            Text Book: <input type="text" ng-model="sub.book" /><br />
+            <input type="submit" ng-click="update(user)" value="Save" />
+          </form>-->  
+        </div>  
+          <!--<table class="table table-striped" > 
             <tr>
               <th style = "text-align:center;">
                   Text Book
@@ -312,13 +347,6 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
                 {{course.}}
               </td>
             </tr>
-          </table>
-          <!--<div>  
-             <div class="row">
-              <div class="col-md-4"><h3>Text Book </h3></div>
-              <div class="col-md-4"><h3> Course </h3></div>
-              <div class="col-md-4"><h3> Author </h3></div>
-            </div>
             <div ng-repeat="course in courses" style = "padding-top:20px;">  
               <div class="row" "padding-top:20px;">
                 <div class="col-md-4">{{course.name}}</div>
@@ -330,7 +358,7 @@ Out of the allowed $ 10000, the individual may carry not more than $ 3000 as cas
        </div>
        -->
        
-</div>
+     
                 </div>
             </div>
         </div>
