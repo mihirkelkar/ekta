@@ -15,6 +15,7 @@ app.controller("CsCtrl", ["$scope", "$http",function($scope, $http){
 		});
 		$http.post('../data/cs.json', $scope.courses).
   			success(function(data, status, headers, config) {
+  				$scope.courses = data;
     			console.log("Success");
   			});
 		}
