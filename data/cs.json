@@ -1,9 +1,18 @@
 [
-	
-{
-"name" : "Design and Analysis of Algorithms",
-"code" : "Introduction to Algorithms (CLRS)",
-"author" : "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest"
-}
-
+					{
+					"name" : "Introduction to Algorithms (CLRS)",
+					"code" : "Design and Analysis of Algorithms"
+					},
+					{
+					"name" : "Computer Organization. (Hennesy,Patterson)",
+					"code" : "Advanced Computer Architecture"	
+					},
+					{
+					"name" : "Distribtued Systems Principles and Paradigms",
+					"code" : "Advanced Opearting Systems"	
+					},
+					{
+					"name" : "Machine Learning",
+					"code" : "A course in Machine Learning : Hal Daume"
+					}
 ]
