@@ -74,8 +74,18 @@ span{
 
 p {
     padding: 10px;
+    font-family: 'Open Sans', sans-serif;
 <<<<<<< HEAD
 }
+
+h3{
+    font-family: 'Abril Fatface', cursive;
+}
+
+h1{
+    font-family: 'Abril Fatface', cursive;
+}
+
 
 @media screen and (max-width: 600px) {
   #warnone {
